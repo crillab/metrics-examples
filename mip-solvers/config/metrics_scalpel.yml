@@ -1,0 +1,61 @@
+name: Metrics Demonstration for MIP Solvers
+date: January 2022
+
+setup:
+  os: Linux CentOS Stream 8.3 (x86_64)
+  cpu: Intel Xeon E5-2643 (3.30GHz)
+  ram: 64GB
+  timeout: 1200
+  memout: 32768
+
+source:
+  path: experiments
+  format: dir
+
+data:
+  raw-data:
+    # File stdout (information about the command line).
+    - file: stdout
+      log-data: experiment_ware
+      regex: 'c executable: .*/(.*.sh)'
+    - file: stdout
+      log-data: input
+      pattern: 'c job: {any}'
+      exact: true
+
+    # File statistics.out (information about the runtime).
+    - file: statistics.out
+      log-data: cpu_time
+      pattern: 'CPUTIME={real}'
+
+    # File execution.out (output of CPLEX).
+    - file: execution.out
+      log-data: objective
+      pattern: 'Objective = {real}'
+    - file: execution.out
+      log-data: status
+      pattern: 'MIP - Integer {word} solution'
+    - file: execution.out
+      log-data: status
+      pattern: 'MIP - Integer {any} ('
+    - file: execution.out
+      log-data: decision
+      pattern: 'MIP - Integer {word}'
+
+    # File execution.out (output of SCIP).
+    - file: execution.out
+      log-data: objective
+      pattern: 'Primal Bound : {real}'
+    - file: execution.out
+      log-data: status
+      pattern: 'SCIP Status : solving was {word}'
+    - file: execution.out
+      pattern: 'SCIP Status : problem is {word} [{word}'
+      groups:
+        status: 1
+        decision: 2
+    - file: execution.out
+      pattern: '[^0-9]*([-+0-9e.]*?)s\|([^|]*?\|){14}\s?([-+0-9e.]*?[^- ])\*?\s?\|'
+      groups:
+        timestamp_list: 1
+        bound_list: 3

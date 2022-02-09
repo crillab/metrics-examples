@@ -1,0 +1,8 @@
+# Output of the experiments.
+experiments
+
+# Binary files of the solvers.
+experiment_wares/ilog
+experiment_wares/others
+experiment_wares/scip
+
