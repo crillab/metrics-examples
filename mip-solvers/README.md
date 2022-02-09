@@ -6,8 +6,8 @@ analyze a campaign experimenting MIP solvers.
 ## Description of the environment
 
 The experiments presented here have been run on cluster running Linux CentOS
-Stream 8.3 (x86_64), and equiped with 8-core Intel Xeon E5-2643 (3.30 GHz) and
-64GB of RAM.
+Stream 8.3 (x86_64), and equiped with quadcore Intel Xeon E5-2643 (3.30 GHz)
+and 64GB of RAM.
 
 The CPU time was limited to 1200 seconds (20 minutes) and the memory limit was
 set to 32 GB.
