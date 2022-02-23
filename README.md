@@ -5,7 +5,7 @@
 *Metrics* is a Python library for making *rEproducible sofTware peRformance
 analysIs in perfeCt Simplicity*.
 
-[*Metrics*' logo.](figures/logo.png)
+![*Metrics*' logo.](figures/logo.png)
 
 You can [find its source code on *GitHub*](https://github.com/crillab/metrics),
 [read its documentation on *Read the Docs*](https:///metrics.readthedocs.io)
