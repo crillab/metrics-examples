@@ -21,5 +21,4 @@ This repository contains various use cases of *Metrics*, that are
 distributed for demonstration purposes.
 You may access them through the following table of contents:
 
-+ [Analysis of the performance of MIP solvers](mip-solvers) 
-  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/crillab/metrics-examples/HEAD?labpath=mip-solvers)
++ [Analysis of the performance of MIP solvers](mip-solvers)

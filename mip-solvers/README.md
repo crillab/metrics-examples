@@ -1,5 +1,7 @@
 # Metrics Demonstration for MIP Solvers
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/crillab/metrics-examples/HEAD?labpath=mip-solvers)
+
 This directory contains an analysis demonstrating the use of *Metrics* to
 analyze a campaign experimenting MIP solvers.
 
