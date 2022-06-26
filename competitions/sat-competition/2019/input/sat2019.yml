@@ -1,0 +1,17 @@
+name: XCSP17
+date: 19/05/2020
+setup:
+  os: CentOS
+  cpu: Intel
+  ram: 64GB
+  timeout: 5000
+  memout: 64000
+source:
+  path: example/sat-competition/2019/input/sat2019.csv
+data:
+  mapping:
+    input: benchmark
+    experiment_ware:
+      - solver
+      - configuration
+    cpu_time: solver time
