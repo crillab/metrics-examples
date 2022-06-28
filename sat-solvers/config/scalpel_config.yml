@@ -1,0 +1,27 @@
+name: Metrics Demonstration for SAT Solvers
+date: September 2020
+
+setup:
+  timeout: 10000
+  memout: 16384
+
+source:
+  format: csv
+  separator: ' '
+  has-header: false
+  path:
+    - experiments/glucose.txt
+    - experiments/kissat.txt
+
+data:
+  # The name of the experiment-ware is that of the file.
+  file-name-meta:
+    pattern: "{word}.txt"
+    groups:
+      experiment_ware: 1
+
+  # Mapping the (unnamed) columns of the CSV file to explicit names.
+  mapping:
+    input: 0
+    decision: 1
+    cpu_time: 2
