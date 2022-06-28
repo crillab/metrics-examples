@@ -1,0 +1,9 @@
+name: Metrics Demonstration for Subgraph Solvers
+date: October 2020
+
+setup:
+  timeout: 1000
+
+source:
+  path: experiments/campaign.csv
+  format: reverse-csv
