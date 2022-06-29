@@ -50,9 +50,9 @@ You can retrieve the full configuration of *Metrics-Scalpel* in
 Below are given some details about what will be extracted from the output files,
 based on this configuration.
 
-Of course, this description corresponds to *our* execution environment, and you
-are not forced to use the same configuration to use *Metrics* to analyze your
-experiments.
+Of course, this description corresponds to a *particular* execution environment,
+and you are not forced to use the same configuration to use *Metrics* to analyze
+your experiments.
 
 ### File `stdout`
 
