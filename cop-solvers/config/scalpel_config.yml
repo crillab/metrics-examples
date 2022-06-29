@@ -1,0 +1,63 @@
+name: Metrics Demonstration for COP Solvers
+date: June 2022
+
+setup:
+  os: Linux CentOS Stream 8.3 (x86_64)
+  cpu: Intel XEON X5550
+  ram: 32GB
+  timeout: 1200
+  memout: 16384
+
+source:
+  path: experiments
+  format: multi-files
+
+data:
+  # Information about inputs and experiment-wares is extracted from file names.
+  file-name-meta:
+    pattern: "experiments/{any}-{any}_{any}.xml.lzma.stats"
+    groups:
+      experiment_ware: 1
+      family: 2
+      input: 3
+
+  raw-data:
+    # File *.stats (statistics about the runtime for all experiments).
+    - log-data: cpu_time
+      file: "*.stats"
+      pattern: "CPUTIME={real}"
+
+    # File *.status (decision found by Cosoco).
+    - log-data: status
+      file: "*.status"
+      pattern: "{word}"
+
+    # File *.log (raw output of Sat4j).
+    - log-data: status
+      file: "*.log"
+      pattern: "s {any}"
+      exact: true
+    - log-data: bound_list
+      file: "*.log"
+      pattern: "o {integer}"
+      exact: true
+
+  mapping:
+    # XML tags from ACE.
+    bounds: cop.bounds.bound
+    timestamp: cop.bounds.bound.time
+    status: cop.status
+
+    # JSON fields from Choco.
+    b: bounds
+    t: timestamp
+
+    # Remapping for ACE and Choco.
+    bound_list: b
+    timestamp_list: t
+
+  data-files:
+    # Structured data files from various experiment-wares.
+    - "*.csv"
+    - "*.json"
+    - "*.xml"

@@ -23,7 +23,12 @@ This repository contains various use cases of *Metrics*, that are distributed
 for demonstration purposes.
 You may access them through the following table of contents:
 
+- [Analysis of different solver competitions](competitions)
+    - [SAT 2019 (campaign in CSV format)](competitions/sat-19)
+    - [XCSP 2019 (campaign in evaluation format)](competitions/xcsp-19)
 - [Analysis of the performance of COP solvers (using various types of files)](cop-solvers)
+- [Analysis of the performance of CSP solvers (using XML data files)](csp-solvers)
 - [Analysis of the performance of MIP solvers (using raw output files)](mip-solvers)
+- [Analysis of the performance of PB solvers (using raw output files)](pb-solvers)
 - [Analysis of the performance of SAT solvers (campaign in custom CSV files)](sat-solvers)
 - [Analysis of the performance of subgraph solvers (campaign in reverse CSV format)](subgraph-solvers)
