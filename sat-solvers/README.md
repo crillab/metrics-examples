@@ -7,8 +7,8 @@ analyze a campaign experimenting SAT solvers.
 
 ## Description of the solvers
 
-For these experiments, two SAT solvers have been run, namely *glucose* and
-*kissat*.
+For these experiments, two SAT solvers have been run, namely *Glucose* and
+*Kissat*.
 
 These two solvers are the distinct *experiment-wares* of our analysis.
 Note that *experiment-wares* is the generic name used by *Metrics* to
@@ -49,9 +49,9 @@ file-name-meta:
 You can find the full configuration of *Metrics-Scalpel* in
 [this file](config/metrics_scalpel.yml).
 
-Of course, this description corresponds to *our* execution environment, and you
-are not forced to use the same configuration to use *Metrics* to analyze your
-experiments.
+Of course, this description corresponds to a *particular* execution environment,
+and you are not forced to use the same configuration to use *Metrics* to analyze
+your experiments.
 
 ## Analysis
 

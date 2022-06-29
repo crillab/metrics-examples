@@ -3,7 +3,6 @@ date: September 2020
 
 setup:
   timeout: 10000
-  memout: 16384
 
 source:
   format: csv
